@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Event Post</string>
+    <string name="title_activity_post_event">PostEvent</string>
+</resources>
