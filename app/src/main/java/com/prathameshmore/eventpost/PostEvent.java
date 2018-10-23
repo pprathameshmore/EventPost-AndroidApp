@@ -3,6 +3,7 @@ package com.prathameshmore.eventpost;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -42,7 +44,6 @@ public class PostEvent extends AppCompatActivity {
     private EditText mPostAddress;
 
     private int year, month, day;
-    private DatePicker mDatePicker;
     private Calendar calendar;
     String date;
 
@@ -140,7 +141,6 @@ public class PostEvent extends AppCompatActivity {
         final String name = mPostTitle.getText().toString().trim();
         final String desc = mPostDesc.getText().toString().trim();
         final String branch = mPostBranch.getText().toString().trim();
-        //final String date = mPostDate.getText().toString().trim();
         final String time = mPostTime.getText().toString().trim();
         final String contact = mPostContact.getText().toString().trim();
         final String mail = mPostMail.getText().toString().trim();
@@ -164,10 +164,11 @@ public class PostEvent extends AppCompatActivity {
             mPostContact.setText("");
             mPostMail.setText("");
             mPostAddress.setText("");
-            Toast.makeText(this, "Event is posted successfully", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Event is posted successfully", Toast.LENGTH_LONG).show();
             mProgressDialog.dismiss();
         }
     }
+
 
 
 
